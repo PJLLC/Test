@@ -1,0 +1,17 @@
+{
+  "name": "elsewhere-travel",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "build:standalone": "npm run build && node scripts/standalone.js",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test tests/data.test.js",
+    "test:e2e": "playwright test",
+    "test:standalone": "npm run build:standalone && node --test tests/standalone.test.js",
+    "test:deployment": "npm run build && node --test tests/deployment.test.js"
+  },
+  "devDependencies": { "vite": "8.3.4", "@playwright/test": "1.61.1" }
+}
