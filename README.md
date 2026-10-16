@@ -39,6 +39,8 @@ When ready to publish:
 
 The workflow has been prepared locally. Its presence alone does not enable Pages or create a public website. GitHub Pages publishes a live site; it is not a private preview service.
 
+If **Check GitHub Pages settings** fails with **Get Pages site failed / Not Found**, open the repository's **Settings → Pages** and ensure **Build and deployment → Source** is **GitHub Actions**. Save if a Save button is shown, then start a new run of this workflow on `main`. If Pages settings instead show a plan or organization restriction, resolve that restriction before retrying. The workflow's default GitHub token cannot automatically enable a missing Pages site; adding `enablement: true` alone is insufficient.
+
 ## Validate
 
 ```sh
